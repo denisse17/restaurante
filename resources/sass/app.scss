@@ -1,0 +1,34 @@
+// Fonts
+///@import url("https://fonts.googleapis.com/css?family=Nunito");
+//@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
+
+// Variables
+@import "variables";
+@import "seccion-menu";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+.navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+footer {
+    background: #000;
+    color: #fff;
+}
+.contenedor {
+    background: #ccc;
+    @media screen and (max-width: 768px) {
+        background: #ddd;
+        font-size: 20px;
+    }
+}
+@mixin red-message($selector) {
+    body #{$selector}:before {
+        content: "Estos son los detalles del producto!";
+    }
+}
+
+@include red-message(".contenedor");
